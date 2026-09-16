@@ -10,6 +10,9 @@ body {
     color: #042d11;
     background-color: #ffffff;
     line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -49,11 +52,14 @@ header nav a {
 }
 
 /* ===== Main Layout ===== */
-main {
+
+    main {
+    flex: 1;
     max-width: 1100px;
     margin: 2.5rem auto;
     padding: 0 2rem;
 }
+
 
 section {
     background-color: #fff;
@@ -190,6 +196,7 @@ form button[type="submit"]:hover {
 footer {
     text-align: center;
     padding: 1.25rem;
+    background-color: #247a6b;
     color: #2a3034;
     font-size: 0.9rem;
 }
