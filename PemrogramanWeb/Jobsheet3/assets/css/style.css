@@ -7,13 +7,13 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #2b2b2b;
-    background-color: #f5f6f8;
+    color: #042d11;
+    background-color: #ffffff;
     line-height: 1.5;
 }
 
 a {
-    color: #1d5b8a;
+    color: #247a6b;
     text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #247a6b;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -33,13 +33,14 @@ header {
 }
 
 header h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 header nav a {
@@ -49,33 +50,38 @@ header nav a {
 
 /* ===== Main Layout ===== */
 main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 2rem;
 }
 
 section {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
 }
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #247a6b;
+    text-align: center;
+}
+
+section p{
+    margin-top: 0.5rem;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
+    background-color: #e8f5f2;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -90,7 +96,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #247a6b;
 }
 
 /* ===== Tabel ===== */
@@ -106,7 +112,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #247a6b;
     color: #fff;
 }
 
@@ -153,31 +159,38 @@ form input,
 form select {
     width: 100%;
     max-width: 400px;
-    padding: 0.55rem 0.7rem;
-    border: 1px solid #cdd4da;
-    border-radius: 4px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #4f5a61;
+    border-radius: 5px;
     font-size: 1rem;
 }
 
+form {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    width: 100%;
+    max-width: 403px;
+    background-color: #247a6b;
     color: #fff;
     border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
+    padding: 0.65rem 0.75rem;
+    border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #247a6b;
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 1.25rem;
-    color: #7a8794;
+    color: #2a3034;
     font-size: 0.9rem;
 }
 

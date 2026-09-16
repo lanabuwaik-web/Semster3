@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistem Informasi Data Kos | Tambah Kamar</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistem Informasi Data Kos</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar kamar</a></li>
+                <li><a href="tambah.html">Tambah kamar</a></li>
+                <li><a href="../penghuni/list.html">Daftar penghuni</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah kamar</h2>
+            <form>
+                <p>
+                    <label for="no_kamar">No. kamar</label><br>
+                    <input type="text" id="no_kamar" name="no_kamar" required>
+                </p>
+                <p>
+                    <label for="tipe_kamar">Tipe Kamar</label><br>
+                    <input type="text" id="tipe_kamar" name="tipe_kamar" required>
+                </p>
+                <p>
+                    <label for="harga">Harga per Bulan</label><br>
+                    <input type="text" id="harga" name="harga" required>
+                </p>
+                <p>
+                    <label for="status">Status</label><br>
+                    <input type="text" id="status" name="status" required>
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistem Informasi Data Kos &mdash; Jobsheet 3</p>
+    </footer>
+</body>
+</html>
