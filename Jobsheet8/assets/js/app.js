@@ -1,4 +1,4 @@
-// ===== Hamburger menu (JS-driven) =====
+// ===== Hamburger menu =====
 function initNavToggle() {
     const toggleBtn = document.getElementById("nav-toggle-btn");
     const nav = document.querySelector("header nav");
@@ -9,7 +9,7 @@ function initNavToggle() {
     });
 }
 
-// ===== Konfirmasi hapus (front-end only, belum ke server) =====
+// ===== Konfirmasi hapus =====
 function initHapusConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-hapus");
@@ -17,6 +17,7 @@ function initHapusConfirm() {
 
         const row = btn.closest("tr");
         const nama = row ? row.querySelector("td")?.textContent : "data ini";
+
         const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
 
         if (yakin && row) {
@@ -25,7 +26,7 @@ function initHapusConfirm() {
     });
 }
 
-// ===== Filter/pencarian tabel real-time =====
+// ===== Filter/pencarian tabel =====
 function initTableFilter() {
     const input = document.getElementById("search-input");
     const table = document.querySelector(".table-responsive table");
@@ -42,7 +43,7 @@ function initTableFilter() {
     });
 }
 
-// ===== Validasi form (client-side) =====
+// ===== Validasi form =====
 function tampilkanError(input, pesan) {
     hapusError(input);
 
@@ -68,7 +69,9 @@ function initValidasiForm() {
     form.addEventListener("submit", function (e) {
         let valid = true;
 
+        // Validasi nama penghuni
         const nama = form.querySelector("[name='nama']");
+
         if (nama && nama.value.trim() === "") {
             tampilkanError(nama, "Nama wajib diisi.");
             valid = false;
@@ -76,7 +79,9 @@ function initValidasiForm() {
             hapusError(nama);
         }
 
+        // Validasi nomor kamar
         const nomorKamar = form.querySelector("[name='nomor_kamar']");
+
         if (nomorKamar && nomorKamar.value.trim() === "") {
             tampilkanError(nomorKamar, "Nomor kamar wajib diisi.");
             valid = false;
@@ -84,7 +89,9 @@ function initValidasiForm() {
             hapusError(nomorKamar);
         }
 
+        // Validasi harga kamar
         const harga = form.querySelector("[name='harga']");
+
         if (harga) {
             const nilai = parseInt(harga.value, 10);
 

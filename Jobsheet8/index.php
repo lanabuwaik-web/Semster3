@@ -1,27 +1,29 @@
 <?php
 $page_title = "Beranda";
 include __DIR__ . '/includes/header.php';
-?>
+require __DIR__ . '/includes/koneksi.php';
 
+$totalKamar = $pdo->query("SELECT COUNT(*) FROM kamar")->fetchColumn();
+$totalPenghuni = $pdo->query("SELECT COUNT(*) FROM penghuni")->fetchColumn();
+?>
         <section>
             <h2>Selamat Datang di Sistem Informasi Data Kost</h2>
             <p>Aplikasi sederhana untuk mengelola data kamar dan penghuni kost.</p>
         </section>
 
         <section>
-            <h2>Informasi</h2>
+            <h2>Ringkasan</h2>
             <article>
-                <h3>Data Kamar</h3>
-                <p>Kelola informasi kamar kost.</p>
+                <h3>Total Kamar</h3>
+                <p><?php echo $totalKamar; ?></p>
             </article>
             <article>
-                <h3>Data Penghuni</h3>
-                <p>Kelola informasi penghuni kost.</p>
+                <h3>Total Penghuni</h3>
+                <p><?php echo $totalPenghuni; ?></p>
             </article>
             <article>
-                <h3>Informasi Kost</h3>
-                <p>Kelola data kost dengan mudah.</p>
+                <h3>Kamar Tersedia</h3>
+                <p>0</p>
             </article>
         </section>
-
 <?php include __DIR__ . '/includes/footer.php'; ?>

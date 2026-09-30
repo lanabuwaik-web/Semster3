@@ -9,18 +9,19 @@ function initNavToggle() {
     });
 }
 
-// ===== Konfirmasi hapus (front-end only, belum ke server) =====
+// ===== Konfirmasi hapus =====
 function initHapusConfirm() {
-    document.addEventListener("click", function (e) {
-        const btn = e.target.closest(".btn-hapus");
-        if (!btn) return;
+    document.addEventListener("submit", function (e) {
+        const form = e.target;
+        if (!form.classList.contains("form-hapus")) return;
 
-        const row = btn.closest("tr");
+        const row = form.closest("tr");
         const nama = row ? row.querySelector("td")?.textContent : "data ini";
+
         const yakin = confirm("Yakin ingin menghapus \"" + nama + "\"?");
 
-        if (yakin && row) {
-            row.remove();
+        if (!yakin) {
+            e.preventDefault();
         }
     });
 }
@@ -69,6 +70,7 @@ function initValidasiForm() {
         let valid = true;
 
         const nama = form.querySelector("[name='nama']");
+
         if (nama && nama.value.trim() === "") {
             tampilkanError(nama, "Nama wajib diisi.");
             valid = false;
@@ -77,6 +79,7 @@ function initValidasiForm() {
         }
 
         const nomorKamar = form.querySelector("[name='nomor_kamar']");
+
         if (nomorKamar && nomorKamar.value.trim() === "") {
             tampilkanError(nomorKamar, "Nomor kamar wajib diisi.");
             valid = false;
@@ -85,6 +88,7 @@ function initValidasiForm() {
         }
 
         const harga = form.querySelector("[name='harga']");
+
         if (harga) {
             const nilai = parseInt(harga.value, 10);
 
