@@ -29,4 +29,3 @@ $_SESSION['flash'] = [
 
 header('Location: login.php');
 exit;
-```
