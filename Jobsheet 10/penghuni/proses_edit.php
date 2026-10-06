@@ -1,4 +1,3 @@
-```php
 <?php
 require __DIR__ . '/../includes/auth.php';
 require __DIR__ . '/../includes/koneksi.php';
@@ -41,4 +40,3 @@ $stmt->execute([
 $_SESSION['flash'] = ['type' => 'success', 'pesan' => 'Penghuni berhasil diperbarui.'];
 header('Location: list.php');
 exit;
-```

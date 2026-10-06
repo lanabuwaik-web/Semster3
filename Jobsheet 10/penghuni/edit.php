@@ -1,4 +1,3 @@
-```php
 <?php
 require __DIR__ . '/../includes/auth.php';
 $page_title = "Edit Penghuni";
@@ -55,4 +54,3 @@ if (!$penghuni) {
         </section>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
-```

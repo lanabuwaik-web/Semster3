@@ -1,4 +1,3 @@
-```php
 <?php
 require __DIR__ . '/../includes/auth.php';
 $page_title = "Daftar Penghuni";
@@ -93,7 +92,6 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
         </section>
 
 <?php include __DIR__ . '/../includes/footer.php'; ?>
-```
 
 **Penyesuaian dari kode dosen:**
 
