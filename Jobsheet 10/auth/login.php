@@ -10,7 +10,7 @@ include __DIR__ . '/../includes/header.php';
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 ?>
-        <section>
+        <section class="login-section">
             <h2>Login Petugas</h2>
 
             <?php if ($flash): ?>

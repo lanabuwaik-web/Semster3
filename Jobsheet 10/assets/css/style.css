@@ -142,13 +142,10 @@ td button {
 }
 
 td button:first-o
-/* ===== Halaman Login ===== */
-main:has(form[action="proses_login.php"]) {
-    display: flex;
-    justify-content: center;
-}
 
-main:has(form[action="proses_login.php"]) section {
+/* ===== Login ===== */
+.login-section {
     width: 100%;
-    max-width: 500px;
+    max-width: 660px;
+    margin: 2rem auto;
 }
