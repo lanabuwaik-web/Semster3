@@ -143,9 +143,18 @@ td button {
 
 td button:first-o
 
-/* ===== Login ===== */
+/* ===== Tampilan Login ===== */
 .login-section {
+    width: 660px;
+    max-width: 100%;
+    margin: 2rem auto !important;
+}
+
+.login-section form {
+    max-width: 450px;
+}
+
+.login-section input {
     width: 100%;
-    max-width: 660px;
-    margin: 2rem auto;
+    max-width: 450px;
 }
