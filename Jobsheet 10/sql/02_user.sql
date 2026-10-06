@@ -1,4 +1,3 @@
-```sql
 -- Jobsheet 10: tabel users (Petugas) untuk autentikasi
 -- Jalankan: psql -d sistem_kost -f sql/02_users.sql
 
@@ -9,4 +8,3 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     role VARCHAR(20) NOT NULL DEFAULT 'petugas'
 );
-```
